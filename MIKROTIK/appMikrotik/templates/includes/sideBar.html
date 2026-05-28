@@ -1,1 +1,60 @@
-Barra de navegacion lateral
+{% load static %}
+<div class="d-flex">
+  <aside class="d-flex flex-column flex-shrink-0" style="min-height: 100vh; background-color: #D9D9D9;" id="mainSidebar">
+    <!-- Encabezado / Logo -->
+    <div class="d-flex align-items-center justify-content-between p-3" style="border-bottom: none;">
+      <span class="fs-4 fw-semibold text-dark" id="brandText">
+        <i class="fas fa-bolt text-warning me-1"></i> MikroCore
+      </span>
+      <button class="btn btn-sm btn-outline-dark" id="collapseBtn" type="button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Navegación principal -->
+    <ul class="nav nav-pills flex-column mb-auto p-3">
+      <li class="nav-item">
+        <a href="{% url 'home' %}" class="nav-link text-dark d-flex align-items-center gap-3" title="Inicio">
+          <i class="fas fa-home fa-fw fs-5"></i>
+          <span class="sidebar-text text-dark">Inicio</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-dark d-flex align-items-center gap-3" title="Clientes">
+          <i class="fas fa-users fa-fw fs-5"></i>
+          <span class="sidebar-text text-dark">Clientes</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{% url 'gestion_pagos' 0 %}" class="nav-link text-dark d-flex align-items-center gap-3" title="Pagos">
+          <i class="fas fa-credit-card fa-fw fs-5"></i>
+          <span class="sidebar-text text-dark">Pagos</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-dark d-flex align-items-center gap-3" title="Servicios">
+          <i class="fas fa-concierge-bell fa-fw fs-5"></i>
+          <span class="sidebar-text text-dark">Servicios</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-dark d-flex align-items-center gap-3" title="Morosidad">
+          <i class="fas fa-exclamation-triangle fa-fw fs-5"></i>
+          <span class="sidebar-text text-dark">Morosidad</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-dark d-flex align-items-center gap-3" title="Reportes">
+          <i class="fas fa-chart-line fa-fw fs-5"></i>
+          <span class="sidebar-text text-dark">Reportes</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-dark d-flex align-items-center gap-3" title="Logs">
+          <i class="fas fa-history fa-fw fs-5"></i>
+          <span class="sidebar-text text-dark">Logs</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+</div>
